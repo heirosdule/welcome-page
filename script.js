@@ -1,6 +1,6 @@
 const multiStepForm = document.querySelector("[data-multi-step]")
 const formSteps = [...multiStepForm.querySelectorAll("[data-step]")]
-let currentStep = formSteps.findIndex(step => {
+let currentStep = formSteps.findindex(step => {
   return step.classList.contains("active")
 })
 
