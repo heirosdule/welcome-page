@@ -10,14 +10,14 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: url('https://i.ibb.co/KVSmQfr/cgeahs2.jpg?fbclid=IwAR0767l-cbEKQK1J9v7kjNEB_ZcjJMgtEPQih7A0Bb89B5fPB9LSJHk_Bv4') center/cover fixed no-repeat; /* Added background image */
-      background-color: rgba(176, 141, 129, 0.3); /* Background color with 30% opacity */
+      background: url('https://i.ibb.co/KVSmQfr/cgeahs2.jpg?fbclid=IwAR0767l-cbEKQK1J9v7kjNEB_ZcjJMgtEPQih7A0Bb89B5fPB9LSJHk_Bv4') center/cover fixed no-repeat;
+      background-color: rgba(176, 141, 129, 0.3);
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-blend-mode: overlay; /* Blend background color with background image */
-      overflow: hidden; /* Hide overflowing gradient */
+      background-blend-mode: overlay;
+      overflow: hidden;
     }
 
     .gradient-overlay {
@@ -26,10 +26,10 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 1; /* Ensure the gradient overlay is above the background image */
-      background: linear-gradient(to right, #800000, #D2B48C, #800000, #D2B48C); /* Maroon to tan gradient */
-      background-size: 200% 100%; /* Double the width for animation */
-      animation: waveMotion 10 linear infinite; /* Continuous wave motion animation */
+      z-index: 1;
+      background: linear-gradient(to right, #800000, #D2B48C, #800000, #D2B48C);
+      background-size: 200% 100%; /* Changed background-size to use percentage values */
+      animation: waveMotion 10s linear infinite;
     }
 
     @keyframes waveMotion {
@@ -45,15 +45,15 @@
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.8); /* Tan color with 80% opacity */
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       max-width: 400px;
       width: 100%;
       text-align: center;
-      position: relative; /* Added relative positioning */
-      z-index: 2; /* Ensure the container is above the gradient overlay */
+      position: relative;
+      z-index: 2;
     }
 
     .logo {
@@ -63,12 +63,12 @@
     }
 
     h2 {
-      color: #800000; /* Maroon color */
+      color: #800000;
     }
 
     .login-box {
       margin-top: 0px;
-      margin-left: auto; /* Align to the right */
+      margin-left: auto;
     }
 
     .login-box input {
@@ -88,10 +88,10 @@
       background-color: #800000;
       color: #fff;
       cursor: pointer;
-      transition: background-color 0.3s; /* Added transition */
-      text-decoration: none; /* Remove underline */
-      display: block; /* Ensure full width */
-      margin-top: 10px; /* Add some space */
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: block;
+      margin-top: 10px;
     }
 
     .login-box .login-button:hover {
@@ -100,22 +100,22 @@
 
     .forgot-password,
     .dont-have-account {
-      color: #800000; /* Maroon color for forgot password text */
+      color: #800000;
     }
 
     .register-link,
     .forgot-password-link {
-      color: #D2B48C; /* Tan color for register, forgot password, and don't have account links */
+      color: #D2B48C;
     }
 
     .privacy-link,
     .terms-link,
     .inquiries-email {
-      color: #D2B48C; /* Tan color for privacy statement, terms of use, and inquiries email */
+      color: #D2B48C;
     }
 
     .terms-statement {
-      color: #800000; /* Maroon color for the surrounding text */
+      color: #800000;
     }
   </style>
 </head>
