@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cgeahsoes</title>
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/98t9qxX/download-removebg-preview.png?fbclid=IwAR23tk_k4NdrQI3TUXlx-Pi_0BAgxQ95om-RrixstaeewHDNuFOPPtJ8rHY">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://i.ibb.co/KVSmQfr/cgeahs2.jpg?fbclid=IwAR0767l-cbEKQK1J9v7kjNEB_ZcjJMgtEPQih7A0Bb89B5fPB9LSJHk_Bv4') center/cover fixed no-repeat;
+      background-color: rgba(176, 141, 129, 0.3);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-blend-mode: overlay;
+      overflow: hidden;
+    }
+
+    .gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(to right, #800000, #D2B48C, #800000, #D2B48C);
+      background-size: 200% 100%; /* Changed background-size to use percentage values */
+      animation: waveMotion 10s linear infinite;
+    }
+
+    @keyframes waveMotion {
+      0% {
+        background-position: 0% 0;
+      }
+      50% {
+        background-position: 100% 0;
+      }
+      100% {
+        background-position: 0% 0;
+      }
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      margin-bottom: 5px;
+      max-width: 50%;
+      height: auto;
+    }
+
+    h2 {
+      color: #800000;
+    }
+
+    .login-box {
+      margin-top: 0px;
+      margin-left: auto;
+    }
+
+    .login-box input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .login-box .login-button {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #800000;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .login-box .login-button:hover {
+      background-color: #4a1a10;
+    }
+
+    .forgot-password,
+    .dont-have-account {
+      color: #800000;
+    }
+
+    .register-link,
+    .forgot-password-link {
+      color: #D2B48C;
+    }
+
+    .privacy-link,
+    .terms-link,
+    .inquiries-email {
+      color: #D2B48C;
+    }
+
+    .terms-statement {
+      color: #800000;
+    }
+  </style>
+</head>
+<body>
+  <div class="gradient-overlay"></div> <!-- Added gradient overlay -->
+  <div class="container">
+    <img class="logo" src="https://i.ibb.co/98t9qxX/download-removebg-preview.png?fbclid=IwAR23tk_k4NdrQI3TUXlx-Pi_0BAgxQ95om-RrixstaeewHDNuFOPPtJ8rHY" alt="School Logo">
+    <h2>Camp General Emilio</h2>
+    <h2>Aguinaldo High School</h2>
+    <div class="login-box">
+      <input type="text" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <a class="login-button" href="https://example.com">Login</a>
+      <p class="dont-have-account">Don't have an account? <a class="register-link" href="#">Register here</a></p>
+      <p class="terms-statement">By using this service, you understand and agree to the <a class="terms-link" href="https://heirosdule.github.io/welcome-page/termsofuse.html">Terms of Use</a> and <a class="privacy-link" href="https://heirosdule.github.io/welcome-page/privacy.html">Privacy Statement</a></p>
+      <p class="inquiries-email">For inquiries and concerns, email us at <a class="privacy-link" href="mailto:hs.campgeneralemilioaguinaldo@depedqc.ph">hs.campgeneralemilioaguinaldo@depedqc.ph</a></p>
+    </div>
+  </div>
+</body>
+</html>
