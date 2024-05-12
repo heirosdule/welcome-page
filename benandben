@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT Quiz</title>
+  <style>
+    /* Common Button Style */
+    button {
+      background-color: #FFC107; /* Amber */
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 2px solid #FFC107;
+      transition-duration: 0.4s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    /* JavaScript Effects */
+    button.correct {
+      background-color: #4CAF50; /* Green */
+      border-color: #4CAF50;
+    }
+
+    button.incorrect {
+      background-color: #F44336; /* Red */
+      border-color: #F44336;
+    }
+  </style>
+</head>
+<body>
+  <div id="quiz-container">
+    <h1>ICT Quiz</h1>
+    <div id="question"></div>
+    <button id="optionA" class="option"></button>
+    <button id="optionB" class="option"></button>
+    <button id="optionC" class="option"></button>
+    <button id="optionD" class="option"></button>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "What does CSS stand for?",
+        options: ["A. Computer Style Sheets", "B. Creative Style Sheets", "C. Cascading Style Sheets", "D. Colorful Style Sheets"],
+        answer: "C"
+      },
+      {
+        question: "Which property is used to change the background color of an element?",
+        options: ["A. color", "B. bgcolor", "C. background-color", "D. bg-color"],
+        answer: "C"
+      },
+      {
+        question: "What does HTML stand for?",
+        options: ["A. Hyper Text Markup Language", "B. Hyperlinks and Text Markup Language", "C. Home Tool Markup Language", "D. Hyperlinks and Text Markup Logic"],
+        answer: "A"
+      },
+      {
+        question: "Which HTML tag is used to define an internal style sheet?",
+        options: ["A. <style>", "B. <css>", "C. <script>", "D. <html>"],
+        answer: "A"
+      },
+      {
+        question: "Which HTML attribute is used to define inline styles?",
+        options: ["A. style", "B. font", "C. class", "D. styles"],
+        answer: "A"
+      }
+    ];
+
+    // Shuffle function
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    shuffle(questions);
+
+    let currentQuestion = 0;
+
+    function loadQuestion() {
+      const q = questions[currentQuestion];
+      document.getElementById("question").innerText = q.question;
+      const options = document.getElementsByClassName("option");
+      for (let i = 0; i < options.length; i++) {
+        options[i].innerText = q.options[i];
+        options[i].onclick = function() {
+          if (q.options[i][0] === q.answer) {
+            this.classList.add("correct");
+          } else {
+            this.classList.add("incorrect");
+            for (let j = 0; j < options.length; j++) {
+              if (q.options[j][0] === q.answer) {
+                options[j].classList.add("correct");
+              }
+            }
+          }
+          setTimeout(nextQuestion, 1000);
+        };
+        options[i].classList.remove("correct", "incorrect");
+      }
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        loadQuestion();
+      } else {
+        alert("Quiz finished!");
+      }
+    }
+
+    window.onload = loadQuestion;
+  </script>
+</body>
+</html>
